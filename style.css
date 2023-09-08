@@ -11,9 +11,11 @@ body {
 }
 
 .inner {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 200px 200px 200px;
+	position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px; /* Отступ между контейнерами */
+    float: left; /* Расположение в ряд (влево) */
 }
 
 .img {
