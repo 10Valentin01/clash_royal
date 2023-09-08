@@ -1,6 +1,6 @@
 from aiogram import Bot, Dispatcher
 from aiogram.filters import Command
-from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton
 from aiogram.types.web_app_info import WebAppInfo
 
 API_TOKEN: str = '6655338084:AAGjpfRsKbejABHrV7EMIjadFydTQrfB7k4'
@@ -15,8 +15,12 @@ async def process_start_command(message: Message):
     btn_1 = InlineKeyboardButton(text='Shop', web_app=WebAppInfo(url='https://10valentin01.github.io/clash_royal/'))
     kb = InlineKeyboardMarkup(inline_keyboard=[[btn_1]])
 
-    await message.answer('Привет!\nМеня зовут бот магазин!\nЗаходи!', reply_markup=kb)
+    btn_2 = KeyboardButton(text='site', web_app=WebAppInfo(url='https://10valentin01.github.io/clash_royal/'))
+    kb_1 = ReplyKeyboardMarkup(resize_keyboard=True, keyboard=[[btn_2]])
 
+
+    await message.answer('Привет!\nМеня зовут бот магазин!\nЗаходи!', reply_markup=kb)
+    await message.answer('2', reply_markup=kb_1)
 
 @dp.message(Command(commands=['help']))
 async def process_help_command(message: Message):
