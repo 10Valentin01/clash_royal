@@ -1,54 +1,20 @@
 body {
-	margin: 0;
-	padding: 0;
-	font-size: 18px;
-	color: var(--tg-theme-text-color);
-	background: var(--tg-theme-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-.container {
-	max-width: 370px;
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 380px;
 }
 
-.inner {
-	position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 20px; /* Отступ между контейнерами */
-    float: left; /* Расположение в ряд (влево) */
-}
-
-.img {
-    border-radius: 20px; /* Закругление углов */
-    width: 100%; /* Ширина картинки 100% контейнера */
-    height: 100%; /* Высота картинки 100% контейнера */
-    object-fit: cover; /* Заполнение контейнера картинкой без искажения */
-    position: absolute; /* Позиция абсолютная относительно контейнера */
-    top: 0; /* Расположение сверху */
-    left: 0; /* Расположение слева */
-}
-
-.item {
-	text-align: center;
-}
-
-.btn {
-	display: inline-block;
-	padding: 10px 20px;
-	border: none;
-	background: rgb(248, 168, 24);
-	border-radius: 10px;
-	color: #fff;
-	text-transform: uppercase;
-	font-weight: 700;
-
-	transition: background .2s linear;
-}
-
-.btn:hover {
-	background: lightgreen;
-}
-
-.usercard {
-	text-align: center;
+.image-container img {
+    width: calc(50% - 10px); /* 2 ряда по 3 изображения с небольшими отступами */
+    height: auto;
+    margin: 5px;
+    border-radius: 10px; /* Закругленные углы */
 }
