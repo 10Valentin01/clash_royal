@@ -12,10 +12,10 @@ dp: Dispatcher = Dispatcher()
 
 @dp.message(Command(commands=["start"]))
 async def process_start_command(message: Message):
-    btn_1 = InlineKeyboardButton(text='Shop', web_app=WebAppInfo(url=''))
-    kb = InlineKeyboardMarkup([btn_1])
+    btn_1 = InlineKeyboardButton(text='Shop', web_app=WebAppInfo(url='https://10valentin01.github.io/clash_royal/'))
+    kb = InlineKeyboardMarkup(inline_keyboard=[[btn_1]])
 
-    await message.answer('Привет!\nМеня зовут бот магазин!\nЗаходи!')
+    await message.answer('Привет!\nМеня зовут бот магазин!\nЗаходи!', reply_markup=kb)
 
 
 @dp.message(Command(commands=['help']))
