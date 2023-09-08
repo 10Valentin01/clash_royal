@@ -17,7 +17,7 @@ h1 {
 }
 
 main {
-    max-width: 800px;
+    max-width: 380px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -29,7 +29,7 @@ main {
 }
 
 .image-container img {
-    width: 200px; /* Измените размеры изображений по вашему усмотрению */
+    width: 150px; /* Измените размеры изображений по вашему усмотрению */
     height: auto;
     margin: 10px;
     border-radius: 10px;
