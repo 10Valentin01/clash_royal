@@ -2,8 +2,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 25vh;
     margin: 0;
+}
+
+.header {
+    text-align: center; /* Выравнивание заголовка по центру (по желанию) */
+    margin-bottom: 20px; /* Пример отступа между заголовком и изображениями */
+}
+
+.main-heading {
+    font-weight: bold;
 }
 
 .image-container {
